@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ==========GLOBALES========== */
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,121,108,1) 29%, rgba(3,182,211,1) 68%, rgba(0,138,255,1) 100%);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    background-color: #ffffff;
+}
+
+/* .calculator .display-screen{
+    display: inline-block;
+    flex-direction: column;
+} */
+
+.calculator #display{
+    color: #0a1e23;
+    margin: 0 10px;
+    height: 120px;
+    max-width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.calculator #equal{
+    height: 130px;
+}
+
+.calculator #clear{
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculator .btn-number{
+    background-color: #c3eaff;
+    color: #000000;
+}
+
+.calculator .btn-operador{
+    background-color: #ffd0fb;
+    color: #f967f3;
+}
+
+.calculator .btn-equal{
+    background-color: #adf9e7;
+    color: #000000;
+}
+
+.calculator.dark{
+    background-color: #1b1b1b;
+}
+
+.calculator.dark #display{
+    color: #f8fafb;
+}
+
+.calculator.dark #clear{
+    background-color: #4C35AA;
+    color: #ffffff;
+}
+
+.calculator.dark .btn-number{
+    background-color: #8efda6;
+    color: #000000;
+    font-weight: 600;
+}
+
+.calculator.dark .btn-operador{
+    background-color: #f0d84f;
+    color: #000000;
+}
+
+.calculator.dark .btn-equal{
+    background-color: #f23b00;
+    color: #ffffff;
+}
+
+.theme-toggler{
+    position:absolute;
+    top:30px;
+    right: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333333;
+    z-index: -1;
+}
+
+.theme-toggler.active{
+    color: #333333;
+}
+
+.theme-toggler.active::before{
+    background-color: #ffffff;
+}
+
+button{
+    height: 60px;
+    width: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
